@@ -42,6 +42,7 @@ public class CategoryManager implements CategoryService{
 		Category category = this.modelMapperService.forRequest()
 				.map(createCategoryRequest, Category.class);
 		this.categoryDao.save(category);
+		
 		return new SuccessResult(Messages.ADDED);
 		
 	}
